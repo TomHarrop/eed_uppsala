@@ -1,0 +1,88 @@
+---
+title: "Evolution of inflorescence phenotype in African and Asian rice"
+author: "Tom Harrop<br>thomas.harrop@ird.fr<br>"
+date: "28 July 2016"
+output:
+  ioslides_presentation:
+    self_contained: true
+    smaller: true
+    transition: "faster"
+    widescreen: true
+    css: css/overrides.css
+    logo: img/logo.png
+    fig_width: 9.16
+    fig_height: 4.5
+    keep_md: true
+    md_extensions: +pipe_tables
+---
+
+```{r setup, include=FALSE, results="hide"}
+
+library(ggplot2)
+
+# Default resolution is 96 dpi. Higher dpi can be used in R but the figures have to be resized using css.
+# For proper scaling in the html, the figures should be:
+# w    x    h
+# 879       432  px
+# 9.16      4.5  in
+# for slides with subtitles:
+# w    x    h
+# 879       362  px
+# 9.16      3.77  in
+#
+# the smaller figure is not quite right, try 432 px - 48 px - (45 px / 2)
+# 48 px = space taken by the h3 (subtitle)
+# 45 px = margin added to slide > article 
+
+theme_slide <- theme_grey(base_size = 16, base_family = "Lato") +
+  theme(
+    plot.background = element_rect(fill = "transparent", colour = NA),
+    legend.background = element_rect(fill = "transparent", colour = NA))
+knitr::opts_chunk$set(
+  dev.args=list(bg = "transparent", family = "Lato"),
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  dpi = 300,
+  cache = FALSE)
+# source("src/plots.R")
+```
+
+## Rice inflorescence structure
+
+*  Cereals are staple foods
+*  Rice supplies a large proportion of dietary energy
+*  Increasing demand & decreasing resources
+*  Grain production depends on the structure of the inflorescence
+
+## Acknowledgements
+
+<div class="columns-2">
+
+*  **EDI team**
+    * Hélène Adam
+    * Stefan Jouannic
+    * James Tregear
+
+*  **Kater Lab, Università degli Studi di Milano, Italy**
+    * Israr Ud Din
+    * Veronica Gregis
+    * Michela Osnato
+    * Martin Kater
+
+</ul><ul>
+
+* Bioinformatics @ IRD
+    * Axel Verdier, Christine Tranchant
+    * François Sabot
+    * Ndomassi Tando
+
+* Sequencing services
+    * Hélène Vignes (CIRAD, Montpellier, France)
+    * Génopole Toulouse Midi-Pyrénées (genotoul, Toulouse, France)
+    
+</div>
+
+![](img/agropolis.png)
+
+![](img/cariplo.png)
