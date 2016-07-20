@@ -1,3 +1,6 @@
+data/
+slides_cache/
+slides_files/
 .Rhistory
 .Rproj.user/
 abstract/
@@ -7,3 +10,4 @@ inkscape/
 slides.html
 slides.md
 
+.Rproj.user

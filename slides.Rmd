@@ -4,7 +4,7 @@ author: "Tom Harrop<br>thomas.harrop@ird.fr<br>"
 date: "28 July 2016"
 output:
   ioslides_presentation:
-    self_contained: true
+    self_contained: false
     smaller: true
     transition: "faster"
     widescreen: true
@@ -20,7 +20,8 @@ output:
 
 library(ggplot2)
 
-# Default resolution is 96 dpi. Higher dpi can be used in R but the figures have to be resized using css.
+# Default resolution is 96 dpi. Higher dpi can be used in R but the figures
+# have to be resized using css.
 # For proper scaling in the html, the figures should be:
 # w    x    h
 # 879       432  px
@@ -44,27 +45,90 @@ knitr::opts_chunk$set(
   message = FALSE,
   warning = FALSE,
   dpi = 300,
-  cache = FALSE)
-# source("src/plots.R")
+  cache = TRUE)
+source("src/figures.R")
 ```
 
-## Rice inflorescence structure
+## Structure of rice inflorescence
 
-*  Cereals are staple foods
-*  Rice supplies a large proportion of dietary energy
-*  Increasing demand & decreasing resources
-*  Grain production depends on the structure of the inflorescence
+![](img/panicles.png)
+
+## Meristem transitions affect branching
+
+## Regulation of meristem identity
+
+![](img/meristem_identities.png)
+
+## Inter-species diversity
+
+![](img/spec_photos.png)
+
+```{r acc.pheno, fig.width = 9.16 - 3.5}
+print(acc.pheno)
+```
+
+## RNA-seq
+
+![](img/clearing.png)
+
+<br>
+
+* Five accessions
+* Panicles harvested at PBM and SM stage
+* 3 biological replicates
+* Whole-transcriptome (Ribo-Zero), strand-specific TruSeq libraries
+* 30–60 million 2×150b reads per library
+
+## Domestication of Asian rice
+
+```{r as, cache=FALSE}
+print(as.genes)
+```
+
+## Domestication of African rice
+
+```{r af, fig.width=9.16/2}
+print(af2.genes)
+print(af1.genes)
+```
+
+## Parallel evolution
+
+```{r dom}
+print(dom.genes)
+```
+
+## *AP2* (*ERF*) genes
+
+```{r ap2.acc.sig.plot}
+print(ap2.acc.sig.plot)
+```
+
+## *AP2* (*ERF*) genes
+
+![](img/lmdFigure.png)
+
+<footer class="source2">Harrop <em>et al</em>. (2016), Plant J. <a href="http://onlinelibrary.wiley.com/doi/10.1111/tpj.13147/full">10.1111/tpj.13147</a></footer>
+
+## *AP2* (*ERF*) genes
+
+```{r ap2.plot}
+print(ap2.plot)
+```
+
+<footer class="source2">Harrop <em>et al</em>. (2016), Plant J. <a href="http://onlinelibrary.wiley.com/doi/10.1111/tpj.13147/full">10.1111/tpj.13147</a></footer>
 
 ## Acknowledgements
 
 <div class="columns-2">
 
-*  **EDI team**
+*  **EDI team**, IRD, Montpellier, France
     * Hélène Adam
     * Stefan Jouannic
     * James Tregear
+    * Axel Verdier
 
-*  **Kater Lab, Università degli Studi di Milano, Italy**
+*  **Kater Lab**, Università degli Studi di Milano, Italy
     * Israr Ud Din
     * Veronica Gregis
     * Michela Osnato
@@ -73,13 +137,15 @@ knitr::opts_chunk$set(
 </ul><ul>
 
 * Bioinformatics @ IRD
-    * Axel Verdier, Christine Tranchant
+    * Christine Tranchant
     * François Sabot
+    * Pierre Larmande
     * Ndomassi Tando
 
-* Sequencing services
+* Sequencing & microscopy
     * Hélène Vignes (CIRAD, Montpellier, France)
-    * Génopole Toulouse Midi-Pyrénées (genotoul, Toulouse, France)
+    * Histology and Plant Cell Imaging Platform (PHIV: CIRAD, Montpellier, France)
+    * Génopole Toulouse Midi-Pyrénées (genotoul: Toulouse, France)
     
 </div>
 

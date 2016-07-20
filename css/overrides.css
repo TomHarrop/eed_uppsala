@@ -30,7 +30,7 @@ slide:nth-last-of-type(2) {
 }
 
 /*Tidy tiling on list + photo slide*/
-slide:nth-of-type(2) article ul {
+slide:nth-of-type(6) article ul {
   max-width: 300px;
   margin-left: 4em;
   }
@@ -55,11 +55,6 @@ slide article table.rmdtable {
   border-bottom: 0;
 
 }
-slide article#lmd-rna-sequencing table.rmdtable th,
-slide article#lmd-rna-sequencing table.rmdtable td {
-  padding: 0.25em 0.5em;
-  font-size: 16px;
-}
 
 slide article table.rmdtable th {
   width: auto;
@@ -74,6 +69,18 @@ slide article table.rmdtable td, table th {
 }
 
 /*Logos*/
+
+aside.gdbar {
+  background: -webkit-linear-gradient(left,rgba(230,230,230,0),
+    rgba(230,230,230,1)); 
+  background: -o-linear-gradient(right,rgba(230,230,230,0),
+    rgba(230,230,230,1));
+  background: -moz-linear-gradient(right,rgba(230,230,230,0),
+    rgba(230,230,230,1));
+  background: linear-gradient(to right, rgba(230,230,230,0),
+    rgba(230,230,230,1));
+}
+
 #acknowledgements img {
   max-height: 100px;
   max-width: 295px;
