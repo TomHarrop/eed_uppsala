@@ -49,15 +49,15 @@ knitr::opts_chunk$set(
 source("src/figures.R")
 ```
 
-## Structure of rice inflorescence
+## Branching in rice: tillering
+
+![](img/tillering.png)
+
+<footer class="source2">Wang & Li (2005), Plant Mol. Biol. <a href="https://link.springer.com/article/10.1007%2Fs11103-004-4038-x">10.1007/s11103-004-4038-x</a></footer>
+
+## Branching in rice: inflorescence development
 
 ![](img/panicles.png)
-
-## Meristem transitions affect branching
-
-## Regulation of meristem identity
-
-![](img/meristem_identities.png)
 
 ## Inter-species diversity
 
@@ -67,12 +67,18 @@ source("src/figures.R")
 print(acc.pheno)
 ```
 
+## Regulation of meristem identity
+
+![](img/meristem_identities.png)
+
+<footer class="source2">Harrop <em>et al</em>. (2016), Plant J. <a href="http://onlinelibrary.wiley.com/doi/10.1111/tpj.13147/full">10.1111/tpj.13147</a></footer>
+
 ## RNA-seq
 
 ![](img/clearing.png)
 
 <br>
-
+ 
 * Five accessions
 * Panicles harvested at PBM and SM stage
 * 3 biological replicates
@@ -81,7 +87,7 @@ print(acc.pheno)
 
 ## Domestication of Asian rice
 
-```{r as, cache=FALSE}
+```{r as}
 print(as.genes)
 ```
 

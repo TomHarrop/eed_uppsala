@@ -21,7 +21,8 @@
 
 * subpopulations, subspecies. See Crowell GWAS paper for ideas
 * differences between African and Asian species
-* ORIGIN OF THE DOMESTICATIONS!!! IM
+* ORIGIN OF THE DOMESTICATIONS!!! IMPORTANT
+* stress parallel changes
 * effects of domestication
 * Comparison of branching phenotypes across Oryza spp
 
@@ -44,6 +45,7 @@
 # Comparison of gene expression in Oryza spp
 
 * remember to check the number of genes if indica/japonica domestications are considered separately
+* SAP11 (asian dom): relationship b/w giberrelin, cell elongation and branching
 
 # Changes in expression related to domestication
 

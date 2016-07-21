@@ -7,6 +7,8 @@ gm_mean <- function(x, na.rm = TRUE) {
   exp(sum(log(x[x > 0]), na.rm = na.rm)/length(x))
 }
 
+heatscale <- RColorBrewer::brewer.pal(6, "YlOrRd")
+
 # load data
 tfdb.os <- readRDS("data/tfdb_os.Rds")
 lmd.expressed <- readRDS("data/lmdPaper/expressedGenes/expressedGenesAll.Rds")
@@ -17,7 +19,7 @@ lmd.vstmeans <- sapply(levels(lmd.vst$stage), function(x)
 
 # five accessions phenotyping
 acc.pheno <- data.table(read.csv('data/Phenotype_Panicle_corrected.csv',
-                               stringsAsFactors = FALSE))
+                                 stringsAsFactors = FALSE))
 
 # domestication genes
 int.results.table <- readRDS(
@@ -135,7 +137,6 @@ setkey(ap2.pd, order)
 ap2.pd[, symbol := factor(symbol, levels = unique(symbol))]
 
 # draw plot
-heatscale <- RColorBrewer::brewer.pal(6, "YlOrRd")
 ap2.plot <- ggplot(ap2.pd, aes(x = symbol, y = Stage, fill = `Scaled reads`)) +
   theme_slide + xlab(NULL) + ylab(NULL) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, face = "italic"),
@@ -154,9 +155,13 @@ ap2.plot <- ggplot(ap2.pd, aes(x = symbol, y = Stage, fill = `Scaled reads`)) +
 #######################
 
 genes <- int.results.table[padj < 0.05, unique(gene)]
-dom.genes <- ColumnPlot(genes) + theme_slide +
-  theme(axis.text.y = element_text(face = "italic"),
-        strip.text.x = element_text(face = "italic"))
+dom.genes <- ColumnPlot(genes) + theme_slide + 
+  theme(axis.text.y = element_text(face = "italic", size = 10),
+        strip.text.x = element_text(face = "italic"),
+        legend.key.size = unit(3, "mm"),
+        legend.text = element_text(size = 8),
+        legend.title = element_text(size = 8))
+
 
 # for africa, take the top 20 in each direction
 af.table <- dom.continent[padj < 0.05 & domestication == "africa"]
@@ -170,13 +175,22 @@ as <- dom.continent[padj < 0.05 & domestication == "asia", unique(gene)]
 # draw plots
 as.genes <- ColumnPlot(as, species = "asian") + theme_slide +
   theme(axis.text.y = element_text(face = "italic", size = 10),
-        strip.text.x = element_text(face = "italic"))
+        strip.text.x = element_text(face = "italic"),
+        legend.key.size = unit(3, "mm"),
+        legend.text = element_text(size = 8),
+        legend.title = element_text(size = 8))
 af1.genes <- ColumnPlot(af1, species = "african") + theme_slide +
-  theme(axis.text.y = element_text(face = "italic"),
-        strip.text.x = element_text(face = "italic"))
+  theme(axis.text.y = element_text(face = "italic", size = 10),
+        strip.text.x = element_text(face = "italic"),
+        legend.key.size = unit(3, "mm"),
+        legend.text = element_text(size = 8),
+        legend.title = element_text(size = 8))
 af2.genes <- ColumnPlot(af2, species = "african") + theme_slide +
-  theme(axis.text.y = element_text(face = "italic"),
-        strip.text.x = element_text(face = "italic"))
+  theme(axis.text.y = element_text(face = "italic", size = 10),
+        strip.text.x = element_text(face = "italic"),
+        legend.key.size = unit(3, "mm"),
+        legend.text = element_text(size = 8),
+        legend.title = element_text(size = 8))
 
 ##################
 # 5acc ap2 genes #
@@ -189,5 +203,8 @@ ap2.acc <- ap2.all[ap2.all %in% acc.expressed]
 ap2.acc.sig <- stage.results.table[gene %in% ap2.acc & padj < 0.5, unique(gene)]
 
 ap2.acc.sig.plot <- ColumnPlot(ap2.acc.sig) + theme_slide +
-  theme(axis.text.y = element_text(face = "italic"),
-        strip.text.x = element_text(face = "italic"))
+  theme(axis.text.y = element_text(face = "italic", size = 10),
+        strip.text.x = element_text(face = "italic"),
+        legend.key.size = unit(3, "mm"),
+        legend.text = element_text(size = 8),
+        legend.title = element_text(size = 8))
