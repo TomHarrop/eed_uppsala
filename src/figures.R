@@ -82,9 +82,12 @@ acc.pheno.pd <- melt(
   id.vars = c("Species", "Accession", "Indiv", "Panicle"))
 
 # order accessions and species
-acc.pheno.pd[, Accession := factor(
+ord <- c("O. sativa indica", "O. sativa japonica", "O. rufipogon",
+         "O. glaberrima", "O. barthii")
+acc.pheno.pd[, Accession := factor(plyr::mapvalues(
   Accession,
-  levels = c("IR64", "Nipponbare", "W1654", "Tog5681", "B88"))]
+  from = c("IR64", "Nipponbare", "W1654", "Tog5681", "B88"),
+  to = ord), levels = ord)]
 acc.pheno.pd[, Species := factor(
   Species,
   levels = c("O. sativa", "O. rufipogon", "O. glaberrima", "O. barthii"))]
@@ -94,11 +97,9 @@ cols.acc <- RColorBrewer::brewer.pal(5, "Set1")[c(2, 1, 5, 4)]
 acc.pheno <- ggplot(acc.pheno.pd, aes(x = Accession, y = value, fill = Species)) +
   facet_wrap(~variable, scales = "free_y", ncol = 2) +
   theme_slide +
-  scale_fill_manual(values = cols.acc, guide = guide_legend(title=NULL)) +
+  scale_fill_manual(values = cols.acc, guide = FALSE) +
   xlab(NULL) + ylab(NULL) +
-  theme(legend.text = element_text(face = "italic"),
-        legend.position = "top",
-        axis.text.x	= element_text(angle = 45, hjust = 1)) +
+  theme(axis.text.x	= element_text(angle = 45, hjust = 1, face = "italic")) +
   geom_point(size = 2, alpha = 0.5, shape = 21, colour = NA,
              position = position_jitter(width = 0.4))
 
@@ -161,7 +162,6 @@ dom.genes <- ColumnPlot(genes) + theme_slide +
         legend.key.size = unit(3, "mm"),
         legend.text = element_text(size = 8),
         legend.title = element_text(size = 8))
-
 
 # for africa, take the top 20 in each direction
 af.table <- dom.continent[padj < 0.05 & domestication == "africa"]

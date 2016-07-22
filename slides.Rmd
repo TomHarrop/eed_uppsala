@@ -13,7 +13,6 @@ output:
     fig_width: 9.16
     fig_height: 4.5
     keep_md: true
-    md_extensions: +pipe_tables
 ---
 
 ```{r setup, include=FALSE, results="hide"}

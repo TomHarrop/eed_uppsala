@@ -1,8 +1,11 @@
+# Branching in rice: tillering and panicle branches
+
 
 # Rice yield
 
 * molecular mechanisms underlying agronomic traits
-* genes & QTLs for enhancing grain yield
+* **genes & QTLs for enhancing grain yield**
+* **why rice is a model for cereal yield**
 
 # Structure of rice inflorescence
 
@@ -22,6 +25,7 @@
 * subpopulations, subspecies. See Crowell GWAS paper for ideas
 * differences between African and Asian species
 * ORIGIN OF THE DOMESTICATIONS!!! IMPORTANT
+* relative divergence time of species
 * stress parallel changes
 * effects of domestication
 * Comparison of branching phenotypes across Oryza spp
@@ -46,6 +50,7 @@
 
 * remember to check the number of genes if indica/japonica domestications are considered separately
 * SAP11 (asian dom): relationship b/w giberrelin, cell elongation and branching
+* what links the "sets" of genes?
 
 # Changes in expression related to domestication
 
@@ -58,3 +63,9 @@
 # Results overview:
 
 domestication genes -> AP2 genes in expt -> AP2 genes in LMD -> roles of AP2 genes in branching
+
+# Conclusion (three key points)
+
+* Parallel evolution of 
+* Suggest small changes in regulation of "sets" of genes
+* 
