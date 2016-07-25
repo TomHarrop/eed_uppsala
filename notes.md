@@ -59,7 +59,7 @@
 6. RNA-seq experiment
 
 * collected whole panicles from five different varieties from four species
-* collected at the primary branching stage before the differentiation of SM, while the BMs are indeterminate, and at the SM stage when all BMs have differentiated into SM
+* collected at two developmental stages: the primary branching stage before the differentiation of SM, while the BMs are indeterminate, and at the SM stage when all BMs have differentiated into SM
 * used for whole-transcriptome sequencing
 
 Pre-7.
@@ -69,12 +69,22 @@ Pre-7.
     - a gene at zero x-axis would have the same expression between the two types of panicle
     - a gene to the left decreases expression between PBM–SM
     - a gene to the right increases expression
+    - colour of the dot represents the average expression in the species on a Log2 scale
     - the wild species is marked with a blue box
-    - use generalised linear models to detect genes where the change in expression between dev. stages is different in different species
+    - use generalised linear models to detect genes where the change in expression between developmental stages is different in different species
+
+7. Domestication of Asian rice
+
+* set of genes in the wild species that decrease in expression between PBM and SM in the wild species, but not in one or both of the domesticated species
+
+* 4 AP2 transcription factors with -ve change in expression in wild species but reduced change
+* SAP11 / DOG: AN1 zinc-finger protein, involved in regulation of gibberellin biosynthesis (10.1016/j.jplph.2010.12.013)
+
 
 13. Conclusion
 
 * parallel changes in branching phenotype in two separate domestications
+    - artificial selection for increased grain yield
 * Suggest small changes in regulation of "sets" of genes
     - set of genes that decrease in expression between indeterminate and determinate panicles in wild species but not in domesticated species
     - are they acting in the same pathways

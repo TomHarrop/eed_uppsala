@@ -29,15 +29,12 @@ slide:nth-last-of-type(2) {
   background-position: center
 }
 
-/*Tidy tiling on list + photo slides*/
+/*Tidy tiling on list + photo slide*/
 slide:nth-of-type(6) article ul {
-  max-width: 437px;
+  max-width: 300px;
   margin-left: 4em;
   }
-slide:nth-of-type(13) article ul {
-  max-width: 437px;
-  margin-right: 4em;
-  }
+
 
 /*Centre flexbox on every slide*/
 slide article {

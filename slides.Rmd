@@ -126,7 +126,7 @@ print(ap2.plot)
 ##
 
 * **Mechanisms underlying the parallel evolution of inflorescence phenotype?**
-    * parallel changes in branching phenotype in two separate domestications
+    * parallel changes in phenotype in two separate domestications
     * small changes in expression of multiple genes
     * altered expression at family level
 
