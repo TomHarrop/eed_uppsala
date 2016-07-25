@@ -58,7 +58,7 @@ source("src/figures.R")
 
 ![](img/panicles.png)
 
-## Inter-species diversity
+## Inter-species diversity in *Oryza*
 
 ![](img/spec_photos.png)
 
@@ -66,7 +66,7 @@ source("src/figures.R")
 print(acc.pheno)
 ```
 
-## Regulation of meristem identity
+## Inflorescence development
 
 ![](img/meristem_identities.png)
 
@@ -78,11 +78,11 @@ print(acc.pheno)
 
 <br>
  
-* Five accessions
-* Panicles harvested at PBM and SM stage
-* 3 biological replicates
+* Five varietes from four species
+* Whole panicles harvested at PBM and SM stage
 * Whole-transcriptome (Ribo-Zero), strand-specific TruSeq libraries
 * 30–60 million 2×150b reads per library
+* 3 biological replicates
 
 ## Domestication of Asian rice
 
@@ -122,6 +122,17 @@ print(ap2.plot)
 ```
 
 <footer class="source2">Harrop <em>et al</em>. (2016), Plant J. <a href="http://onlinelibrary.wiley.com/doi/10.1111/tpj.13147/full">10.1111/tpj.13147</a></footer>
+
+##
+
+* **Mechanisms underlying the parallel evolution of inflorescence phenotype?**
+    * parallel changes in branching phenotype in two separate domestications
+    * small changes in expression of multiple genes
+    * altered expression at family level
+
+![](img/13742_2014_Article_40_Fig2_HTML.jpg)
+
+<footer class="source2">The 3,000 rice genomes project (2014), GigaScience <a href="http://gigascience.biomedcentral.com/articles/10.1186/2047-217X-3-7">10.1186/2047-217X-3-7</a></footer>
 
 ## Acknowledgements
 

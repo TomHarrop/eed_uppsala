@@ -9,7 +9,9 @@
 
 # Structure of rice inflorescence
 
-* tillering
+* tillering:
+    - MOC1 mutants (GRAS transcription factor) don't initiate axillary mersitems / tiller buds and only have one culm (culm = tiller, branch)
+    - OsTB1: controls outgrowth of tiller buds
 * grass inflorescnce structure defined by arrangement of spikelets
 * describe arrangement of spikelets in detail, e.g. terminal, axillary spikelet
 * photo of o. sativa panicle vs. schematic of panicle architecture
@@ -29,6 +31,7 @@
 * stress parallel changes
 * effects of domestication
 * Comparison of branching phenotypes across Oryza spp
+    - mention intra-specific variation used to find mol mechanisms e.g. WFP/DEP
 
 # Molecular control of branching during inflorescence development
 
@@ -66,6 +69,17 @@ domestication genes -> AP2 genes in expt -> AP2 genes in LMD -> roles of AP2 gen
 
 # Conclusion (three key points)
 
-* Parallel evolution of 
+* parallel changes in branching phenotype in two separate domestications
 * Suggest small changes in regulation of "sets" of genes
-* 
+    - are they acting in the same pathways
+    - are they downstream targets of the same gene(s)
+* Altered expression at family level
+    - Transcription factors
+    - Involvement of AP2 transcription factors
+* need mutants
+
+# Other notes:
+
+* tomato branching: iterative, "sympodial" growth: sympodial shoot meristem produces three leaves, a terminal inflorescence and the next sympodial shoot meristem
+* japonica/indica: varietal groups/subpopulations
+* axillary bud formation could have a common controlling mechanism at vegetative and reproductive stages
