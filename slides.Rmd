@@ -13,6 +13,8 @@ output:
     fig_width: 9.16
     fig_height: 4.5
     keep_md: true
+    includes:
+      in_header: css/header.html
 ---
 
 ```{r setup, include=FALSE, results="hide"}
@@ -20,7 +22,7 @@ output:
 library(ggplot2)
 
 # Default resolution is 96 dpi. Higher dpi can be used in R but the figures
-# have to be resized using css.
+# have to be resized using css or `out.width`.
 # For proper scaling in the html, the figures should be:
 # w    x    h
 # 879       432  px
