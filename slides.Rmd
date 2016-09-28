@@ -4,7 +4,7 @@ author: "Tom Harrop<br>thomas.harrop@ird.fr<br>"
 date: "28 July 2016"
 output:
   ioslides_presentation:
-    self_contained: false
+    self_contained: true
     smaller: true
     transition: "faster"
     widescreen: true
@@ -12,7 +12,7 @@ output:
     logo: img/logo.png
     fig_width: 9.16
     fig_height: 4.5
-    keep_md: true
+    keep_md: false
     includes:
       in_header: css/header.html
 ---
